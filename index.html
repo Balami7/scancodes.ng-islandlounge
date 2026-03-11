@@ -193,6 +193,7 @@ padding:6px 0;
 .total{
 margin-top:10px;
 font-weight:bold;
+text-align:right;
 }
 
 .pay-btn{
@@ -742,16 +743,52 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Can Fayrouz<br><span class="price">₦1000</span></div>
+<div>Can Fayrouz<br><span class="price">₦1500</span></div>
 <div class="qty">
-<button onclick="changeQty('Can Fayrouz',1000,-1)">-</button>
+<button onclick="changeQty('Can Fayrouz',1500,-1)">-</button>
 <span id="qCan Fayrouz">0</span>
-<button onclick="changeQty('Can Fayrouz',1000,1)">+</button>
+<button onclick="changeQty('Can Fayrouz',1500,1)">+</button>
 </div>
 </div>
 
 <div class="item">
-<div>Can Malt<br><span class="price">₦1000</span></div>
+<div>Hollandia<br><span class="price">₦2500</span></div>
+<div class="qty">
+<button onclick="changeQty('Hollandia',2500,-1)">-</button>
+<span id="qHollandia">0</span>
+<button onclick="changeQty('Hollandia',2500,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Chivita<br><span class="price">₦2500</span></div>
+<div class="qty">
+<button onclick="changeQty('Chivita',2500,-1)">-</button>
+<span id="qChivita">0</span>
+<button onclick="changeQty('Chivita',2500,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Exotic<br><span class="price">₦2500</span></div>
+<div class="qty">
+<button onclick="changeQty('Exotic',2500,-1)">-</button>
+<span id="qExotic">0</span>
+<button onclick="changeQty('Exotic',2500,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Cranberry<br><span class="price">₦8000</span></div>
+<div class="qty">
+<button onclick="changeQty('Cranberry',8000,-1)">-</button>
+<span id="qCranberry">0</span>
+<button onclick="changeQty('Cranberry',8000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Maltina<br><span class="price">₦1000</span></div>
 <div class="qty">
 <button onclick="changeQty('Can Malt',1000,-1)">-</button>
 <span id="qCan Malt">0</span>
@@ -871,6 +908,436 @@ font-size:22px;
 </div>
 
 </div>
+
+<div class="category" onclick="toggleCategory('beer')">BEER/MILD ALCOHOL</div>
+
+<div class="items" id="beer">
+
+<div class="item">
+<div>Budweiser<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Budweiser',2000,-1)">-</button>
+<span id="qBudweiser">0</span>
+<button onclick="changeQty('Budweiser',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Heineken<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Heineken',2000,-1)">-</button>
+<span id="qHeineken">0</span>
+<button onclick="changeQty('Heineken',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Flying Fish<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Flying Fish',2000,-1)">-</button>
+<span id="qFlying Fish">0</span>
+<button onclick="changeQty('Flying Fish',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Black Trophy<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Black Trophy',2000,-1)">-</button>
+<span id="qBlack Trophy">0</span>
+<button onclick="changeQty('Black Trophy',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Black Goldbarg<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Black Goldbarg',2000,-1)">-</button>
+<span id="qBlack Goldbarg">0</span>
+<button onclick="changeQty('Black Goldbarg',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Desperado<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Desperado',2000,-1)">-</button>
+<span id="qDesperado">0</span>
+<button onclick="changeQty('Desperado',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Smirnoff Ice (Bottle)<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Smirnoff Ice (Bottle)',2000,-1)">-</button>
+<span id="qSmirnoff Ice (Bottle)">0</span>
+<button onclick="changeQty('Smirnoff Ice (Bottle)',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Origin Beer<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Origin Beer',2000,-1)">-</button>
+<span id="qOrigin Beer">0</span>
+<button onclick="changeQty('Origin Beer',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Legend<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Legend',2000,-1)">-</button>
+<span id="qLegend">0</span>
+<button onclick="changeQty('Legend',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Double Black Smirnoff<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Double Black Smirnoff',2000,-1)">-</button>
+<span id="qDouble Black Smirnoff">0</span>
+<button onclick="changeQty('Double Black Smirnoff',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Trophy<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Trophy',2000,-1)">-</button>
+<span id="qTrophy">0</span>
+<button onclick="changeQty('Trophy',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Guilder<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Guilder',2000,-1)">-</button>
+<span id="qGuilder">0</span>
+<button onclick="changeQty('Guilder',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Goldberg<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Goldberg',2000,-1)">-</button>
+<span id="qGoldberg">0</span>
+<button onclick="changeQty('Goldberg',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Black Bullet<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Black Bullet',2000,-1)">-</button>
+<span id="qBlack Bullet">0</span>
+<button onclick="changeQty('Black Bullet',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Stout<br><span class="price">₦2500</span></div>
+<div class="qty">
+<button onclick="changeQty('Stout',2500,-1)">-</button>
+<span id="qStout">0</span>
+<button onclick="changeQty('Stout',2500,1)">+</button>
+</div>
+</div>
+
+
+</div>
+
+<div class="category" onclick="toggleCategory('bitters')">BITTERS</div>
+
+<div class="items" id="bitters">
+
+<div class="item">
+<div>Bellamour Bitters<br><span class="price">₦1000</span></div>
+<div class="qty">
+<button onclick="changeQty('Bellamour Bitters',1000,-1)">-</button>
+<span id="qBellamour Bitters">0</span>
+<button onclick="changeQty('Bellamour Bitters',1000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Origin Bitters (Bottle)<br><span class="price">₦7000</span></div>
+<div class="qty">
+<button onclick="changeQty('Origin Bitters (Bottle)',7000,-1)">-</button>
+<span id="qOrigin Bitters (Bottle)">0</span>
+<button onclick="changeQty('Origin Bitters (Bottle)',7000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Ace Bitters<br><span class="price">₦1500</span></div>
+<div class="qty">
+<button onclick="changeQty('Ace Bitters',1500,-1)">-</button>
+<span id="qAce Bitters">0</span>
+<button onclick="changeQty('Ace Bitters',1500,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Origin Bitters (Plastic) <br><span class="price">₦2500</span></div>
+<div class="qty">
+<button onclick="changeQty('Origin Bitters (Plastic)',2500,-1)">-</button>
+<span id="qOrigin Bitters (Plastic)">0</span>
+<button onclick="changeQty('Origin Bitters (Plastic)',2500,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('wine')">WINE & SPARKLING</div>
+
+<div class="items" id="wine">
+
+<div class="item">
+<div>Four Cousins<br><span class="price">₦20000</span></div>
+<div class="qty">
+<button onclick="changeQty('Four Cousins',20000,-1)">-</button>
+<span id="qFour Cousins">0</span>
+<button onclick="changeQty('Four Cousins',20000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Andre Rose<br><span class="price">₦20000</span></div>
+<div class="qty">
+<button onclick="changeQty('Andre Rose',20000,-1)">-</button>
+<span id="qAndre Rose">0</span>
+<button onclick="changeQty('Andre Rose',20000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Belaire<br><span class="price">₦90000</span></div>
+<div class="qty">
+<button onclick="changeQty('Belaire',90000,-1)">-</button>
+<span id="qBelaire">0</span>
+<button onclick="changeQty('Belaire',90000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Dom Perignon<br><span class="price">₦700000</span></div>
+<div class="qty">
+<button onclick="changeQty('Dom Perignon',700000,-1)">-</button>
+<span id="qDom Perignon">0</span>
+<button onclick="changeQty('Dom Perignon',700000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Ace of Spades<br><span class="price">₦700000</span></div>
+<div class="qty">
+<button onclick="changeQty('Ace of Spades',700000,-1)">-</button>
+<span id="qAce of Spades">0</span>
+<button onclick="changeQty('Ace of Spades',700000,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('whiskies')">WHISKIES</div>
+
+<div class="items" id="whiskies">
+
+<div class="item">
+<div>Red Label<br><span class="price">₦32000</span></div>
+<div class="qty">
+<button onclick="changeQty('Red Label',32000,-1)">-</button>
+<span id="qRed Label">0</span>
+<button onclick="changeQty('Red Label',32000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Jameson (Green)<br><span class="price">₦40000</span></div>
+<div class="qty">
+<button onclick="changeQty('Jameson (Green)',40000,-1)">-</button>
+<span id="qJameson (Green)">0</span>
+<button onclick="changeQty('Jameson (Green)',40000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Jameson (Black Barrel)<br><span class="price">₦70000</span></div>
+<div class="qty">
+<button onclick="changeQty('Jameson (Black Barrel)',70000,-1)">-</button>
+<span id="qJameson (Black Barrel)">0</span>
+<button onclick="changeQty('Jameson (Black Barrel)',70000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Jack Daniel's<br><span class="price">₦50000</span></div>
+<div class="qty">
+<button onclick="changeQty('Jack Daniels',50000,-1)">-</button>
+<span id="qJack Daniels">0</span>
+<button onclick="changeQty('Jack Daniels',50000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Hennessy VS<br><span class="price">₦100000</span></div>
+<div class="qty">
+<button onclick="changeQty('Hennessy VS',100000,-1)">-</button>
+<span id="qHennessy VS">0</span>
+<button onclick="changeQty('Hennessy VS',100000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Hennessy VSOP<br><span class="price">₦150000</span></div>
+<div class="qty">
+<button onclick="changeQty('Hennessy VSOP',150000,-1)">-</button>
+<span id="qHennessy VSOP">0</span>
+<button onclick="changeQty('Hennessy VSOP',150000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Martell VS<br><span class="price">₦100000</span></div>
+<div class="qty">
+<button onclick="changeQty('Martell VS',100000,-1)">-</button>
+<span id="qMartell VS">0</span>
+<button onclick="changeQty('Martell VS',100000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Martell Blue Swift<br><span class="price">₦150000</span></div>
+<div class="qty">
+<button onclick="changeQty('Martell Blue Swift',150000,-1)">-</button>
+<span id="qMartell Blue Swift">0</span>
+<button onclick="changeQty('Martell Blue Swift',150000,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('tequilaspirit')">TEQUILA & AGAVE SPIRITS</div>
+
+<div class="items" id="tequilaspirit">
+
+<div class="item">
+<div>Olmeca Tequila<br><span class="price">₦50000</span></div>
+<div class="qty">
+<button onclick="changeQty('Olmeca Tequila',50000,-1)">-</button>
+<span id="qOlmeca Tequila">0</span>
+<button onclick="changeQty('Olmeca Tequila',50000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Casamigos<br><span class="price">₦250000</span></div>
+<div class="qty">
+<button onclick="changeQty('Casamigos',250000,-1)">-</button>
+<span id="qCasamigos">0</span>
+<button onclick="changeQty('Casamigos',250000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Azul<br><span class="price">₦600000</span></div>
+<div class="qty">
+<button onclick="changeQty('Azul',600000,-1)">-</button>
+<span id="qAzul">0</span>
+<button onclick="changeQty('Azul',600000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Don Julio<br><span class="price">₦660000</span></div>
+<div class="qty">
+<button onclick="changeQty('Don Julio',660000,-1)">-</button>
+<span id="qDon Julio">0</span>
+<button onclick="changeQty('Don Julio',660000,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('vodka')">VODKA</div>
+
+<div class="items" id="vodka">
+
+<div class="item">
+<div>Ciroc<br><span class="price">₦70000</span></div>
+<div class="qty">
+<button onclick="changeQty('Ciroc',70000,-1)">-</button>
+<span id="qCiroc">0</span>
+<button onclick="changeQty('Ciroc',70000,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('rum')">RUM</div>
+
+<div class="items" id="rum">
+
+<div class="item">
+<div>Bacardi<br><span class="price">₦35000</span></div>
+<div class="qty">
+<button onclick="changeQty('Bacardi',35000,-1)">-</button>
+<span id="qBacardi">0</span>
+<button onclick="changeQty('Bacardi',35000,1)">+</button>
+</div>
+</div>
+</div>
+
+<div class="category" onclick="toggleCategory('energydrinks')">ENERGY DRINKS</div>
+
+<div class="items" id="energydrinks">
+
+<div class="item">
+<div>Predator<br><span class="price">₦1000</span></div>
+<div class="qty">
+<button onclick="changeQty('Predator',1000,-1)">-</button>
+<span id="qPredator">0</span>
+<button onclick="changeQty('Predator',1000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Red Bull<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Red Bull',2000,-1)">-</button>
+<span id="qRed Bull">0</span>
+<button onclick="changeQty('Red Bull',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Power Horse<br><span class="price">₦2000</span></div>
+<div class="qty">
+<button onclick="changeQty('Power Horse',2000,-1)">-</button>
+<span id="qPower Horse">0</span>
+<button onclick="changeQty('Power Horse',2000,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Monster<br><span class="price">₦1500</span></div>
+<div class="qty">
+<button onclick="changeQty('Monster',1500,-1)">-</button>
+<span id="qMonster">0</span>
+<button onclick="changeQty('Monster',1500,1)">+</button>
+</div>
+</div>
+
+<div class="item">
+<div>Maca<br><span class="price">₦1000</span></div>
+<div class="qty">
+<button onclick="changeQty('Maca',1000,-1)">-</button>
+<span id="qMaca">0</span>
+<button onclick="changeQty('Maca',1000,1)">+</button>
+</div>
+</div>
+</div>
+
 
 </div>
 
@@ -1005,7 +1472,8 @@ ${item} x${qty} - ₦${qty*price}
 
 document.querySelector(".preview").innerText="Preview "+itemsCount
 
-document.getElementById("total").innerText="Total: ₦"+total
+document.getElementById("total").innerText="Total: ₦"+total.toLocaleString()
+
 
 }
 
@@ -1027,4 +1495,3 @@ alert("Proceed to payment of ₦"+total)
 
 </body>
 </html>
-
