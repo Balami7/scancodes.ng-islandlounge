@@ -272,6 +272,37 @@ cursor:pointer;
     cursor: pointer;
 }
 
+.error-msg {
+    color: #dc3545;
+    font-size: 13px;
+    margin-top: 4px;
+    margin-bottom: 12px;
+    display: block;
+    font-weight: 500;
+}
+
+.input-error {
+    border: 2px solid #dc3545 !important;
+}
+
+#modalStatus {
+    margin-top: 20px;
+    padding: 12px;
+    border-radius: 8px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    text-align: center;
+    font-weight: bold;
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
 /* Star rating */
 .star-rating {
     display: flex;
@@ -365,7 +396,7 @@ font-size:22px;
 <body>
 
 <div class="header">
-<img src="images/island.jpeg" class="logo">
+<img src="images/island.jpg" class="logo">
 </div>
 
 <div class="menu-area">
@@ -434,33 +465,6 @@ font-size:22px;
 <button onclick="changeQty('WhiteR ice',500,-1)">-</button>
 <span id="qWhite Rice">0</span>
 <button onclick="changeQty('White Rice',500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Jambalaya Rice<br><span class="price">₦1500</span></div>
-<div class="qty">
-<button onclick="changeQty('Jambalaya Rice',1500,-1)">-</button>
-<span id="qJambalaya Rice">0</span>
-<button onclick="changeQty('Jambalaya Rice',1500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Coconut Rice<br><span class="price">₦1500</span></div>
-<div class="qty">
-<button onclick="changeQty('Coconut Rice',1500,-1)">-</button>
-<span id="qCoconut Rice">0</span>
-<button onclick="changeQty('Coconut Rice',1500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Pineapple Rice<br><span class="price">₦1500</span></div>
-<div class="qty">
-<button onclick="changeQty('Pineapple Rice',1500,-1)">-</button>
-<span id="qPineapple Rice">0</span>
-<button onclick="changeQty('Pineapple Rice',1500,1)">+</button>
 </div>
 </div>
 
@@ -551,20 +555,11 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Bush Meat<br><span class="price">₦5000</span></div>
+<div>Bush Meat<br><span class="price">₦3000</span></div>
 <div class="qty">
-<button onclick="changeQty('Bush Meat',5000,-1)">-</button>
+<button onclick="changeQty('Bush Meat',3000,-1)">-</button>
 <span id="qBush Meat">0</span>
-<button onclick="changeQty('Bush Meat',5000,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Bush Meat Pepper Soup<br><span class="price">₦7500</span></div>
-<div class="qty">
-<button onclick="changeQty('Bush Meat Pepper Soup',7500,-1)">-</button>
-<span id="qBush Meat Pepper Soup">0</span>
-<button onclick="changeQty('Bush Meat Pepper Soup',7500,1)">+</button>
+<button onclick="changeQty('Bush Meat',3000,1)">+</button>
 </div>
 </div>
 
@@ -574,24 +569,6 @@ font-size:22px;
 <button onclick="changeQty('Hake Fish',2500,-1)">-</button>
 <span id="qHake Fish">0</span>
 <button onclick="changeQty('Hake Fish',2500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Dry Peppered Fish<br><span class="price">₦2500</span></div>
-<div class="qty">
-<button onclick="changeQty('Dry Peppered Fish',2500,-1)">-</button>
-<span id="qDry Peppered Fish">0</span>
-<button onclick="changeQty('Dry Peppered Fish',2500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Titus Fish<br><span class="price">₦2500</span></div>
-<div class="qty">
-<button onclick="changeQty('Dry Peppered Fish',2500,-1)">-</button>
-<span id="qDry Peppered Fish">0</span>
-<button onclick="changeQty('Dry Peppered Fish',2500,1)">+</button>
 </div>
 </div>
 
@@ -655,15 +632,6 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Porridge Beans<br><span class="price">₦500</span></div>
-<div class="qty">
-<button onclick="changeQty('Porridge Beans',500,-1)">-</button>
-<span id="qPorridge Beans">0</span>
-<button onclick="changeQty('Porridge Beans',500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
 <div>White Beans<br><span class="price">₦500</span></div>
 <div class="qty">
 <button onclick="changeQty('White Beans',500,-1)">-</button>
@@ -699,11 +667,11 @@ font-size:22px;
 <div class="items" id="appetizer">
 
 <div class="item">
-<div>Assorted Pepper Soup<br><span class="price">₦6000</span></div>
+<div>Assorted Pepper Soup<br><span class="price">₦3000</span></div>
 <div class="qty">
-<button onclick="changeQty('Assorted Pepper Soup',6000,-1)">-</button>
+<button onclick="changeQty('Assorted Pepper Soup',3000,-1)">-</button>
 <span id="qAssorted Pepper Soup">0</span>
-<button onclick="changeQty('Assorted Pepper Soup',6000,1)">+</button>
+<button onclick="changeQty('Assorted Pepper Soup',3000,1)">+</button>
 </div>
 </div>
 
@@ -726,20 +694,11 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Parfait<br><span class="price">₦5000</span></div>
+<div>Parfait<br><span class="price">₦4500</span></div>
 <div class="qty">
-<button onclick="changeQty('Parfait',5000,-1)">-</button>
+<button onclick="changeQty('Parfait',4500,-1)">-</button>
 <span id="qParfait">0</span>
-<button onclick="changeQty('Parfait',5000,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Tiger Nut<br><span class="price">₦3500</span></div>
-<div class="qty">
-<button onclick="changeQty('Tiger Nut',3500,-1)">-</button>
-<span id="qTiger Nut">0</span>
-<button onclick="changeQty('Tiger Nut',3500,1)">+</button>
+<button onclick="changeQty('Parfait',4500,1)">+</button>
 </div>
 </div>
 
@@ -823,11 +782,11 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Sea Food Okro<br><span class="price">₦15000</span></div>
+<div>Sea Food Okro<br><span class="price">₦500</span></div>
 <div class="qty">
-<button onclick="changeQty('Sea Food Okro',15000,-1)">-</button>
+<button onclick="changeQty('Sea Food Okro',500,-1)">-</button>
 <span id="qSea Food Okro">0</span>
-<button onclick="changeQty('Sea Food Okro',15000,1)">+</button>
+<button onclick="changeQty('Sea Food Okro',500,1)">+</button>
 </div>
 </div>
 
@@ -848,15 +807,6 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Yam and egg sauce<br><span class="price">₦2000</span></div>
-<div class="qty">
-<button onclick="changeQty('Yam and egg sauce',2000,-1)">-</button>
-<span id="qYam and egg sauce">0</span>
-<button onclick="changeQty('Yam and egg sauce',2000,1)">+</button>
-</div>
-</div>
-
-<div class="item">
 <div>Bole with sauce<br><span class="price">₦4000</span></div>
 <div class="qty">
 <button onclick="changeQty('Bole with sauce',4000,-1)">-</button>
@@ -866,15 +816,6 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Garri with peppered dry fish<br><span class="price">₦3000</span></div>
-<div class="qty">
-<button onclick="changeQty('Garri with peppered dry fish',3000,-1)">-</button>
-<span id="qGarri with peppered dry fish">0</span>
-<button onclick="changeQty('Garri with peppered dry fish',3000,1)">+</button>
-</div>
-</div>
-
-<div class="item">
 <div>Palm Wine<br><span class="price">₦500</span></div>
 <div class="qty">
 <button onclick="changeQty('Palm Wine',500,-1)">-</button>
@@ -884,29 +825,11 @@ font-size:22px;
 </div>
 
 <div class="item">
-<div>Palm Wine<br><span class="price">₦500</span></div>
+<div>Fried Plantain<br><span class="price">₦500</span></div>
 <div class="qty">
-<button onclick="changeQty('Palm Wine',500,-1)">-</button>
-<span id="qPalm Wine">0</span>
-<button onclick="changeQty('Palm Wine',500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Brokoto<br><span class="price">₦2500</span></div>
-<div class="qty">
-<button onclick="changeQty('Brokoto',2500,-1)">-</button>
-<span id="qBrokoto">0</span>
-<button onclick="changeQty('Brokoto',2500,1)">+</button>
-</div>
-</div>
-
-<div class="item">
-<div>Fried Plantain<br><span class="price">₦1000</span></div>
-<div class="qty">
-<button onclick="changeQty('Fried Plantain',1000,-1)">-</button>
+<button onclick="changeQty('Fried Plantain',500,-1)">-</button>
 <span id="qFried Plantain">0</span>
-<button onclick="changeQty('Fried Plantain',1000,1)">+</button>
+<button onclick="changeQty('Fried Plantain',500,1)">+</button>
 </div>
 </div>
 </div>
@@ -1555,20 +1478,60 @@ font-size:22px;
 
 </div>
 
-<button class="menu-btn" onclick="toggleSection('events')">Programs & Events</button>
+<button class="menu-btn" onclick="toggleSection('events-section')">Program & Events</button>
 
-<div class="section" id="events">
-<!--
-<div class="item">
-<div>Shisha<br><span class="price">₦8000</span></div>
-<div class="qty">
-<button onclick="changeQty('Shisha',8000,-1)">-</button>
-<span id="qShisha">0</span>
-<button onclick="changeQty('Shisha',8000,1)">+</button>
-</div>
-</div>
--->
+<div class="section" id="events-section">
+    <div class="category" onclick="toggleCategory('day-mon')">MONDAY <span>+</span></div>
+    <div class="items" id="day-mon">
+        <div class="item">
+            <div>Morning Jazz Session<br><span class="price">10:00 - 11:00</span></div>
+        </div>
+        <div class="item">
+            <div>Coffee Networking<br><span class="price">12:00 - 14:00</span></div>
+        </div>
+    </div>
 
+    <div class="category" onclick="toggleCategory('day-tue')">TUESDAY <span>+</span></div>
+    <div class="items" id="day-tue">
+        <div class="item">
+            <div>Business Brunch<br><span class="price">11:00 - 13:00</span></div>
+        </div>
+    </div>
+
+    <div class="category" onclick="toggleCategory('day-wed')">WEDNESDAY <span>+</span></div>
+    <div class="items" id="day-wed">
+        <div class="item">
+            <div>Wine Tasting<br><span class="price">18:00 - 20:00</span></div>
+        </div>
+    </div>
+
+    <div class="category" onclick="toggleCategory('day-thu')">THURSDAY <span>+</span></div>
+    <div class="items" id="day-thu">
+        <div class="item">
+            <div>Live Acoustic Set<br><span class="price">19:00 - 21:00</span></div>
+        </div>
+    </div>
+
+    <div class="category" onclick="toggleCategory('day-fri')">FRIDAY <span>+</span></div>
+    <div class="items" id="day-fri">
+        <div class="item">
+            <div>Karaoke Night<br><span class="price">20:00 - Late</span></div>
+        </div>
+    </div>
+
+    <div class="category" onclick="toggleCategory('day-sat')">SATURDAY <span>+</span></div>
+    <div class="items" id="day-sat">
+        <div class="item">
+            <div>Club Night<br><span class="price">22:00 - 04:00</span></div>
+        </div>
+    </div>
+
+    <div class="category" onclick="toggleCategory('day-sun')">SUNDAY <span>+</span></div>
+    <div class="items" id="day-sun">
+        <div class="item">
+            <div>Family Buffet<br><span class="price">12:00 - 16:00</span></div>
+        </div>
+    </div>
 </div>
 
 </div>
@@ -1674,7 +1637,7 @@ function closeCart() {
 
 function pay(){
 
-alert("Proceed to payment of ₦"+total+" to the following account details:\nBank Name:Moniepoint Microfinance Bank\nAccount Name: Akure Buka Ventures\nAccount Number: 5203979318\nPlease show payment receipt to waiter.\nThank You for Your Patronage.");
+alert("Proceed to payment of ₦"+total+" to the following account details:\nBank Name:Moniepoint Microfinance Bank\nAccount Name: Akure Buka Ventures\nAccount Number: 5203978658\nPlease show payment receipt to waiter.\nThank You for Your Patronage.");
 
 }
 
@@ -1695,6 +1658,40 @@ function showComingSoon() {
     openModal();
 }
 
+
+function setError(id, message) {
+    const inputEl = document.getElementById(id);
+    let errorSpan = document.getElementById(id + "-error");
+
+    if (message) {
+        inputEl.classList.add("input-error");
+        if (!errorSpan) {
+            errorSpan = document.createElement("span");
+            errorSpan.id = id + "-error";
+            errorSpan.className = "error-msg";
+            inputEl.after(errorSpan);
+        }
+        errorSpan.innerText = message;
+    } else {
+        inputEl.classList.remove("input-error");
+        if (errorSpan) errorSpan.remove();
+    }
+}
+
+function showSuccess(message) {
+    if (document.getElementById("modalStatus")) return;
+
+    const statusDiv = document.createElement("div");
+    statusDiv.id = "modalStatus";
+    statusDiv.innerText = message;
+    document.getElementById("modalBody").appendChild(statusDiv);
+
+    setTimeout(() => {
+        closeModal();
+    }, 1500);
+}
+
+
 function showTipForm() {
     document.getElementById("modalBody").innerHTML = `
         <h3>Tip Staff</h3>
@@ -1714,15 +1711,18 @@ function showTipForm() {
 function addTipToCart() {
     const recipient = document.getElementById("tipRecipient").value;
     const amount = Number(document.getElementById("tipAmount").value);
+
     if (!amount || amount < 100) {
-        alert("Please enter a valid tip amount (minimum ₦100)");
+        setError("tipAmount", "Please enter at least ₦100.");
         return;
+    } else {
+        setError("tipAmount", "");
     }
+
     const name = `Tip – ${recipient}`;
     cart[name] = { qty: 1, price: amount };
     updateCart();
-    closeModal();
-    alert(`₦${amount} tip for ${recipient} added to cart!`);
+    showSuccess(`₦${amount} tip for ${recipient} added to cart!`);
 }
 
 function showSongRequest(title) {
@@ -1743,22 +1743,25 @@ function addSongToCart(title) {
     const song = document.getElementById("songTitle").value.trim();
     const artist = document.getElementById("songArtist").value.trim();
     const amount = Number(document.getElementById("songAmount").value);
-    if (!song || !artist || !amount || amount < 5000) {
-        alert("Please fill song title, artist and a valid amount (min ₦5000)");
-        return;
-    }
+    let isValid = true;
+
+    if (!song) { setError("songTitle", "What's the song name?"); isValid = false; } else { setError("songTitle", ""); }
+    if (!artist) { setError("songArtist", "Who is the artist?"); isValid = false; } else { setError("songArtist", ""); }
+    if (!amount || amount < 5000) { setError("songAmount", "Minimum amount is ₦5000."); isValid = false; } else { setError("songAmount", ""); }
+
+    if (!isValid) return;
+
     const name = `${title}: ${song} – ${artist}`;
     cart[name] = { qty: 1, price: amount };
     updateCart();
-    closeModal();
-    alert(`${title} request added to cart!`);
+    showSuccess(`${title} request added to cart!`);
 }
 
 function showShoutOut() {
     document.getElementById("modalBody").innerHTML = `
         <h3>Special Shout Out Request</h3>
         <label>Message / Shout Out</label>
-        <textarea id="shoutMessage" rows="4" placeholder="e.g. Happy Birthday Tunde! From your guys at table 7"></textarea>
+        <textarea id="shoutMessage" rows="4" placeholder=""></textarea>
         <label>Amount (₦)</label>
         <input type="number" id="shoutAmount" min="5000" placeholder="Suggested min ₦5000">
         <button class="submit-btn" onclick="addShoutToCart()">Add to Cart</button>
@@ -1769,61 +1772,68 @@ function showShoutOut() {
 function addShoutToCart() {
     const msg = document.getElementById("shoutMessage").value.trim();
     const amount = Number(document.getElementById("shoutAmount").value);
-    if (!msg || !amount || amount < 5000) {
-        alert("Please write a message and enter valid amount (min ₦5000)");
-        return;
-    }
+    let isValid = true;
+
+    if (!msg) { setError("shoutMessage", "Please write a message."); isValid = false; } else { setError("shoutMessage", ""); }
+    if (!amount || amount < 5000) { setError("shoutAmount", "Minimum amount is ₦5000."); isValid = false; } else { setError("shoutAmount", ""); }
+
+    if (!isValid) return;
+
     const shortMsg = msg.substring(0, 35) + (msg.length > 35 ? "..." : "");
     const name = `Shout Out: ${shortMsg}`;
     cart[name] = { qty: 1, price: amount };
     updateCart();
-    closeModal();
-    alert("Shout out request added to cart!");
+    showSuccess("Shout out request added to cart!");
 }
 
 function showRatingForm() {
     document.getElementById("modalBody").innerHTML = `
         <h3>Rate Your Experience</h3>
-        <div class="star-rating" id="stars">
-            <span data-value="5">★</span>
-            <span data-value="4">★</span>
-            <span data-value="3">★</span>
-            <span data-value="2">★</span>
-            <span data-value="1">★</span>
+        <div class="star-rating" id="stars" style="font-size: 2rem; cursor: pointer; margin-bottom: 10px;">
+            <span data-value="5">★</span> <span data-value="4">★</span> <span data-value="3">★</span> <span data-value="2">★</span> <span data-value="1">★</span>
         </div>
+        <div id="stars-error-container"></div>
         <label>Comments / Feedback</label>
         <textarea id="feedbackText" rows="5" placeholder="Tell us what you think..."></textarea>
         <button class="submit-btn" onclick="submitFeedback()">Submit Feedback</button>
     `;
-
+    
     const stars = document.querySelectorAll("#stars span");
     stars.forEach(star => {
         star.addEventListener("click", () => {
             const rating = star.dataset.value;
             stars.forEach(s => {
                 s.classList.toggle("selected", Number(s.dataset.value) <= Number(rating));
+                s.style.color = Number(s.dataset.value) <= Number(rating) ? "#ffc107" : "#ccc";
             });
+            const err = document.getElementById("stars-error");
+            if (err) err.remove();
         });
     });
-
     openModal();
 }
 
 function submitFeedback() {
     const selectedStars = document.querySelectorAll("#stars span.selected");
     const rating = selectedStars.length;
-    const comment = document.getElementById("feedbackText").value.trim();
 
     if (rating === 0) {
-        alert("Please select a star rating");
+        let err = document.getElementById("stars-error");
+        if (!err) {
+            err = document.createElement("span");
+            err.id = "stars-error";
+            err.className = "error-msg";
+            document.getElementById("stars-error-container").appendChild(err);
+        }
+        err.innerText = "Please select a star rating.";
         return;
     }
 
-    alert(`Thank you!\nRating: ${rating} stars\nFeedback: ${comment || "(no comment)"}`);
-    closeModal();
+    showSuccess("Thank you! Your feedback has been submitted.");
 }
 
-updateCart(); // initialize cart display
+
+updateCart(); 
 
 </script>
 
