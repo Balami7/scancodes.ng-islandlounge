@@ -1703,7 +1703,7 @@ function showTipForm() {
         </select>
         <label>Amount (₦)</label>
         <input type="number" id="tipAmount" min="100" placeholder="Enter amount">
-        <button class="submit-btn" onclick="addTipToCart()">Add Tip to Cart</button>
+        <button class="submit-btn" onclick="addTipToCart()">Pay</button>
     `;
     openModal();
 }
@@ -1732,9 +1732,9 @@ function showSongRequest(title) {
         <input type="text" id="songTitle" placeholder="e.g. Jerusalema">
         <label>Artist</label>
         <input type="text" id="songArtist" placeholder="e.g. Master KG">
-        <label>Amount You're Willing to Pay (₦)</label>
+        <label>This is a paid request of (₦)5000</label>
         <input type="number" id="songAmount" min="5000" placeholder="Suggested min ₦5000">
-        <button class="submit-btn" onclick="addSongToCart('${title}')">Add to Cart</button>
+        <button class="submit-btn" onclick="addSongToCart('${title}')">submit to Request</button>
     `;
     openModal();
 }
@@ -1762,9 +1762,9 @@ function showShoutOut() {
         <h3>Special Shout Out Request</h3>
         <label>Message / Shout Out</label>
         <textarea id="shoutMessage" rows="4" placeholder=""></textarea>
-        <label>Amount (₦)</label>
+        <label>This is a paid request of (₦)5000</label>
         <input type="number" id="shoutAmount" min="5000" placeholder="Suggested min ₦5000">
-        <button class="submit-btn" onclick="addShoutToCart()">Add to Cart</button>
+        <button class="submit-btn" onclick="addShoutToCart()">Submit to Request</button>
     `;
     openModal();
 }
