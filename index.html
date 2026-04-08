@@ -1478,7 +1478,7 @@ font-size:22px;
 
 </div>
 
-<button class="menu-btn" onclick="toggleSection('events-section')">Program & Events</button>
+<button class="menu-btn" onclick="toggleSection('events-section')">Programs & Events</button>
 
 <div class="section" id="events-section">
     <div class="category" onclick="toggleCategory('day-mon')">MONDAY <span>+</span></div>
@@ -1536,7 +1536,7 @@ font-size:22px;
 <div class="lower-section">
     <div class="lower-buttons">
         <button class="lower-btn" onclick="showComingSoon()">Call Attendants</button>
-        <button class="lower-btn" onclick="showSongRequest('Karaoke Song Request')">Karaoke Song Request</button>
+        <button class="lower-btn" onclick="showKaraokeRequest('Karaoke Request')">Karaoke Song Request</button>
         <button class="lower-btn" onclick="showSongRequest('Special Song Request')">Special Song Request</button>
         <button class="lower-btn" onclick="showShoutOut()">Special Shout out Request</button>
         <button class="lower-btn" onclick="showTipForm()">Tip</button>
@@ -1804,6 +1804,37 @@ function addSongToCart(title) {
     cart[name] = { qty: 1, price: amount };
     updateCart();
     showSuccess(`${title} request added to cart!`);
+}
+
+function showKaraokeRequest(title) {
+    document.getElementById("modalBody").innerHTML = `
+        <h3>${title}</h3>
+        <label>Song Title</label>
+        <input type="text" id="karaokeTitle" placeholder="e.g. I Will Always Love You">
+        <label>Artist</label>
+        <input type="text" id="karaokeArtist" placeholder="e.g. Whitney Houston">
+        <p style="font-size: 0.9em; color: #666;">Note: Karaoke requests are free.</p>
+        <button class="submit-btn" onclick="addKaraokeToCart('${title}')">Add to List</button>
+    `;
+    openModal();
+}
+
+function addKaraokeToCart(title) {
+    const song = document.getElementById("karaokeTitle").value.trim();
+    const artist = document.getElementById("karaokeArtist").value.trim();
+    let isValid = true;
+
+    if (!song) { setError("karaokeTitle", "What's the song name?"); isValid = false; } else { setError("karaokeTitle", ""); }
+    if (!artist) { setError("karaokeArtist", "Who is the artist?"); isValid = false; } else { setError("karaokeArtist", ""); }
+
+    if (!isValid) return;
+
+    const name = `Karaoke: ${song} – ${artist}`;
+    cart[name] = { qty: 1, price: 0 }; 
+    
+    updateCart();
+    showSuccess(`${title} request added to cart!`);
+  
 }
 
 function showShoutOut() {
